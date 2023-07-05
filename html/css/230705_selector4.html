@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>가상 요소 선택자</title>
+    <title>가상 요소 선택자 + 속성 선택자</title>
     <style>
+        /* 가상 요소 선택자 */
         .example::after {
             content: "😚";
         }
@@ -13,15 +14,31 @@
         .example::before {
             content: "😃";
         }
+
+
+        /* 속성 선택자 */
+        [type=text] {
+            background-color: green;
+        }
+
+        [value] {
+            color: white;
+        }
     </style>
 </head>
 
 <body>
+    <!-- 가상 요소 선택자 -->
     <div class="example">
         <!-- ::before 에 해당하는 내용 -->
         바로가기
         <!-- ::after 에 해당하는 내용 -->
     </div>
+
+    <!-- 속성 선택자 -->
+    <input type="text" value="HEROPY">
+    <input type="password" value="1234">
+    <input type="text" value="ABCD" disabled>
 </body>
 
 </html>
