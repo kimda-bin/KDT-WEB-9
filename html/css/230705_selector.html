@@ -6,30 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>선택자 공부</title>
     <style>
-        /* * {
-            color: red;
-        } */
-        li {
+        /* 일치 선택자 */
+        li.orange {}
+
+        div>p {
             color: blue;
         }
 
-        .strawberry {
-            background-color: gray;
+        /* 자식 선택자 */
+        div>ul>.orange {
+            color: orange;
         }
 
-        #ex {
-            background-color: aqua;
+        /* 하위 선택자 */
+        div .orange {
+            background-color: red;
+        }
+
+        /* 인접 형제 선택자(바로 다음에 있어야 함) */
+        ul+div {
+            color: blueviolet;
+        }
+
+        /* 일반 형제 선택자 */
+        .apple~li {
+            font-weight: 900;
+            font-size: 30px;
         }
     </style>
 </head>
 
 <body>
-    <div id="ex" class="">안녕</div>
-    <span>다빈</span>
-    <ul>
-        <li>사과</li>
-        <li class="strawberry">딸기</li>
-    </ul>
+    <div>
+        <ul>
+            <li class="apple">사과</li>
+            <li>딸기</li>
+            <li class="orange">오렌지</li>
+        </ul>
+        <div>당근</div>
+        <p>토마토</p>
+        <span class="orange">오렌지</span>
+    </div>
 </body>
 
 </html>
