@@ -7,13 +7,35 @@
     <title>가상 클래스 선택자</title>
     <style>
         /* fruits 클래스 하위요소들의 첫번째 태그가 span이라면 수행 */
-        .fruits span:first-child {
+        /* .fruits span:first-child {
             color: red;
-        }
+        } */
 
         /* fruits 클래스 하위요소들의 마지막 태그가 h3이라면 수행 */
-        .fruits h3:last-child {
+        /* .fruits h3:last-child {
             color: red;
+        } */
+
+        /* 짝수번째 요소만 적용 */
+        /* .fruits *:nth-child(2n) {
+            background-color: green;
+            color: white;
+        } */
+
+        /* 홀수번째 요소만 적용 */
+        /* .fruits *:nth-child(2n+1) {
+            background-color: green;
+            color: white;
+        } */
+
+        /* .fruits *:nth-child(n+2) {
+            background-color: green;
+            color: white;
+        } */
+
+        .fruits span:not(.orange) {
+            background-color: green;
+            color: white;
         }
     </style>
 </head>
@@ -22,7 +44,7 @@
     <div class="fruits">
         <span>딸기</span>
         <span>수박</span>
-        <div>오렌지</div>
+        <div class="orange">오렌지</div>
         <p>망고</p>
         <h3>사과</h3>
     </div>
