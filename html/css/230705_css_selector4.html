@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 요소 선택자</title>
+    <style>
+        .example::after {
+            content: "😚";
+        }
+
+        .example::before {
+            content: "😃";
+        }
+    </style>
+</head>
+
+<body>
+    <div class="example">
+        <!-- ::before 에 해당하는 내용 -->
+        바로가기
+        <!-- ::after 에 해당하는 내용 -->
+    </div>
+</body>
+
+</html>
