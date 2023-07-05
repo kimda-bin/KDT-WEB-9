@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 클래스 선택자</title>
+    <style>
+        /* fruits 클래스 하위요소들의 첫번째 태그가 span이라면 수행 */
+        .fruits span:first-child {
+            color: red;
+        }
+
+        /* fruits 클래스 하위요소들의 마지막 태그가 h3이라면 수행 */
+        .fruits h3:last-child {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fruits">
+        <span>딸기</span>
+        <span>수박</span>
+        <div>오렌지</div>
+        <p>망고</p>
+        <h3>사과</h3>
+    </div>
+</body>
+
+</html>
