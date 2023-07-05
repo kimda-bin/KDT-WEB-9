@@ -24,6 +24,27 @@
         [value] {
             color: white;
         }
+
+        /* 추가 공부 : 속성 값을 변수화 */
+        /* 변수 : 특정 값을 저장하는 공간(--변수이름) */
+        /* :root를 사용해도 되고 html 써도 된다 */
+        :root {
+            --main-color: blue;
+            --main-bg-color: white;
+            --sub-color: rgb(255, 214, 137);
+            --big-font-size: 30px;
+        }
+
+        html {}
+
+        div {
+            color: var(--main-color);
+            font-size: var(--big-font-size);
+        }
+
+        p {
+            background-color: var(--main-color);
+        }
     </style>
 </head>
 
@@ -39,6 +60,9 @@
     <input type="text" value="HEROPY">
     <input type="password" value="1234">
     <input type="text" value="ABCD" disabled>
+
+    <div>안녕</div>
+    <p>다빈</p>
 </body>
 
 </html>
