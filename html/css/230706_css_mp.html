@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin 연습</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .block {
+            background-color: red;
+            color: white;
+            font-size: 2em;
+            width: 200px;
+            height: 200px;
+            margin: 100px;
+            padding: 50px 0px 0px 50px;
+        }
+
+        /* inline은 margin 안되고 padding 된다 */
+        .inline {
+            background-color: blue;
+            color: white;
+            /* margin-top: 100px; */
+            /* margin-left: 100px; */
+            padding-top: 10px;
+            width: 200px;
+
+        }
+
+        .mm-width {
+            background-color: red;
+            /* width: 90vw; */
+            height: 100px;
+            line-height: 100px;
+            /* max-width: 1000px;
+            min-width: 300px; */
+            color: white;
+            font-size: 30px;
+            width: calc(100vw - 50px);
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- margin은 외부 여백 / padding은 내부 여백 -->
+    <div class="block">안녕</div>
+
+    <span class="inline">안녕</span>
+
+    <div class="mm-width">ssss</div>
+</body>
+
+</html>
