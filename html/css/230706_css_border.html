@@ -6,12 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>border 연습</title>
     <style>
-        .box {
-            width: 200px;
-            height: 100px;
-            background-color: aqua;
-        }
-
         .border-1 {
             border-color: black red blue yellow;
             border-style: solid dashed;
@@ -30,13 +24,37 @@
             border-top-width: 10px;
             border-radius: 10px;
         }
+
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: aqua;
+        }
+
+        /* padding, border로 인해 크기 변함 (margin은 변화없음) */
+        .content-box {
+            box-sizing: content-box;
+            padding: 20px;
+            border: 10px solid black;
+        }
+
+        /*  padding, border로 인해 크기 변하지 않음 */
+        .border-box {
+            box-sizing: border-box;
+            padding: 20px;
+            border: 10px solid black;
+        }
     </style>
 </head>
 
 <body>
-    <div class="box border-1"></div>
+    <!-- <div class="box border-1"></div>
     <br><br>
-    <div class="box border-2"></div>
+    <div class="box border-2"></div> -->
+
+    <div class="box content-box">abc</div>
+    <br><br>
+    <div class="box border-box">abc</div>
 </body>
 
 </html>
