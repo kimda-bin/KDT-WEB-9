@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background 연습</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        div {
+            width: 800px;
+            height: 500px;
+            background-color: skyblue;
+        }
+
+        .div-1 {
+            background-position: center;
+            background-image: url('https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a');
+            background-repeat: repeat-x;
+            background-size: auto;
+        }
+
+        .div-2 {
+            background-image: url('https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a');
+            background-position: 100px 30px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .div-3 {
+            background-repeat: no-repeat;
+            background-image: url('https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a');
+            background-size: cover;
+            background-position: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div-1"></div>
+    <br><br>
+    <div class="div-2"></div>
+    <br><br>
+    <div class="div-3"></div>
+</body>
+
+</html>
