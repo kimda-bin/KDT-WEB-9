@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stack-order 실습</title>
+    <style>
+        .container {
+            width: 500px;
+            height: 500px;
+            position: relative;
+            background-color: black;
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+
+        .item-1 {
+            z-index: 1;
+            background-color: red;
+        }
+
+        .item-2 {
+            z-index: 3;
+            background-color: orange;
+            top: 30px;
+            left: 30px;
+        }
+
+        .item-3 {
+            z-index: 2;
+            background-color: yellow;
+            top: 60px;
+            left: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item-1"></div>
+        <div class="item item-2"></div>
+        <div class="item item-3"></div>
+    </div>
+</body>
+
+</html>
