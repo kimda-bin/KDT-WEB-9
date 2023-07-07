@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position 실습</title>
+    <style>
+        .parents {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            background-color: black;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+        }
+
+        .item-1 {
+            background-color: green;
+            position: relative;
+            left: 50px;
+            top: 30px;
+        }
+
+        .item-2 {
+            background-color: yellow;
+            position: absolute;
+            right: 30px;
+            bottom: 100px;
+        }
+
+        .item-3 {
+            background-color: blue;
+            position: fixed;
+            right: 100px;
+            top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="parents">
+        <div class="item-1"></div>
+        <div class="item-2"></div>
+        <div class="item-3"></div>
+    </div>
+</body>
+
+</html>
