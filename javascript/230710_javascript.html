@@ -56,6 +56,58 @@
         // console.log(num.toString(), 5)
 
 
+        let num = 1;
+        num = 5;
+        let numString = "5";
+
+        console.log(num <= 1);
+
+        // ==, !=, <, <=, >, >=
+        // ===, !== : 타입까지 비교한다.
+        console.log(num == numString)
+        console.log(num === numString)
+
+        console.log(num != numString)
+        console.log(num !== numString)
+
+
+        console.log(num + 5)
+        console.log(num - 5)
+        console.log(num * 5)
+        console.log(num / 5)
+        // % : 나머지 출력
+        console.log((num % 5) == 0)
+
+        // num의 제곱
+        console.log(num ** 2);
+
+        // num = num + 5
+        num += 5
+
+        // num = num * 5
+        num *= 5
+        console.log(num)
+
+        // num = num + 1
+        // num++;
+        // console.log(num)
+        // num +=1
+        // num++
+        // ++num;
+
+        // 논리연산자
+        // && => and 연산 : 앞과 뒤과 모두 참일 때, ture 반환 / 둘 중 하나라도 거짓일 경우 false 반환
+        console.log(true && false)
+        console.log(num == 50 && num >= 50)
+
+        // || => or 연산 : 앞과 뒤 둘 중 하나라도 참 일때, true 반환
+        // 둘다 거짓일 경우에만 false 반환
+        console.log(true || false)
+        console.log(num <= 20 || num > 50)
+
+        // true는 false로, false는 ture로 바꾼다
+        console.log(!true)
+        console.log(!(num > 50))
 
     </script>
 </head>
