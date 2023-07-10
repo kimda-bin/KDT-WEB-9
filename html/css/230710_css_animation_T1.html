@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation 실습</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        div {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: aquamarine;
+            animation: movecircle 3s linear 6;
+        }
+
+        @keyframes movecircle {
+            0% {
+                left: 0px;
+            }
+
+            25% {
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                left: 0px;
+                top: 200px;
+                right: 200px;
+            }
+
+            100% {
+                left: 0px;
+                top: 0px;
+                bottom: 200px;
+                right: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
