@@ -126,6 +126,30 @@ section .city .city_img {
   }
 }
 
+@keyframes movecloud_1 {
+  0% {}
+
+  25% {}
+
+  50% {}
+
+  75% {}
+
+  100% {}
+}
+
+@keyframes movecloud_2 {
+  0% {}
+
+  25% {}
+
+  50% {}
+
+  75% {}
+
+  100% {}
+}
+
 /*
   참고: 알아야 할 속성 소개
   oapcity: 0 ~ 1 사이의 값으로 불투명도를 설정할 수 있음
