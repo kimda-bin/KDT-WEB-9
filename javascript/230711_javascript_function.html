@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // sayHello()
+
+        // 함수 선언
+        // 함수 선언문
+        function sayHello() {
+            console.log("hello")
+        }
+
+        // 함수를 만든다고 해서 함수의 내용이 실행되지는 않는다
+        // 호출을 해야 실행된다
+
+        sayHello()
+
+        // 함수 표현식
+        let sayHello2 = function () {
+            console.log("hello2")
+        }
+
+        sayHello2()
+
+        let sayHello3 = () => {
+            console.log("hello3")
+        }
+
+        sayHello3()
+    </script>
+
+    <script>
+        // 매개변수 : 함수 외부에서 사용한 변수, 값 등을 함수 내부로 전달하고 싶을 때 사용
+        // 반환값 : 함수 내부에서 생성된 변수, 값 등을 함수 외부로 전달하고 싶을 때 사용
+
+        // 1. 매개변수 X 반환값 X
+        function aaa() {
+            console.log("aaa")
+        }
+        aaa()
+
+
+        // 2. 매개변수 X 반환값 O
+        function bbb() {
+            return "bbb"
+        }
+        // bbb() // => "bbb"
+        console.log(bbb())
+        let str = bbb()
+
+
+        // 3. 매개변수 O 반환값 X
+        let number1 = 5;
+        let number2 = 3;
+        function ccc(num1, num2) {
+            console.log(num1 + num2)
+        }
+        ccc(number2, "hello")
+
+
+        // 4. 매개변수 O 반환값 O
+        function ddd(a) {
+            return a + 1
+        }
+        console.log(ddd(5))
+
+
+
+        let sum = function (num1, num2) {
+            let num = num1 + num2;
+            let mul = num * 5;
+            return mul
+        }
+
+        let sumMul = sum(3, 6)
+        console.log(sumMul)
+
+
+    </script>
+</body>
+
+</html>
