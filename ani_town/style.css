@@ -9,35 +9,46 @@ body {
 section {
   width: 700px;
   height: 450px;
-  position: absolute;
 }
 
 section .sky {
   width: 100%;
   height: 100%;
+  position: relative;
   animation: skyChange 6s linear infinite;
 }
 
 section .sky .sun {
-  width: 180px;
+  width: 100px;
+  margin: 50px;
+  position: absolute;
   animation: sunRotation 6s linear infinite;
 }
 
 section .sky .moon {
-  width: 160px;
+  width: 80px;
+  margin: 50px;
+  position: absolute;
   animation: moonRotation 6s linear infinite;
 }
 
 section .sky .cloud_1 {
-  width: 160px;
+  width: 130px;
+  margin-top: 100px;
+  position: absolute;
+  animation: movecloud_1 6s ease-in infinite;
 }
 
 section .sky .cloud_2 {
-  width: 90px;
+  width: 80px;
+  margin-top: 120px;
+  position: absolute;
+  animation: movecloud_2 6s ease-in infinite;
 }
 
 section .city .city_img {
   width: 100%;
+  /* position:  */
 }
 
 /* ANIMATION */
@@ -79,22 +90,22 @@ section .city .city_img {
   }
 
   25% {
-    transform: rotate(45deg);
+    transform: rotate(90deg);
     opacity: 0.5;
   }
 
   50% {
-    transform: rotate(90deg);
+    transform: rotate(180deg);
     opacity: 1;
   }
 
   75% {
-    transform: rotate(135deg);
-    opacity: 0.5;
+    transform: rotate(270deg);
+    opacity: 0.3;
   }
 
   100% {
-    transform: rotate(180deg);
+    transform: rotate(360deg);
     opacity: 0;
   }
 }
@@ -106,48 +117,78 @@ section .city .city_img {
   }
 
   25% {
-    transform: rotate(45deg);
-    opacity: 0.5;
+    transform: rotate(90deg);
+    opacity: 0.3;
   }
 
   50% {
-    transform: rotate(90deg);
+    transform: rotate(180deg);
     opacity: 0;
   }
 
   75% {
-    transform: rotate(135deg);
+    transform: rotate(270deg);
     opacity: 0.5;
   }
 
   100% {
-    transform: rotate(180deg);
+    transform: rotate(360deg);
     opacity: 1;
   }
 }
 
 @keyframes movecloud_1 {
-  0% {}
+  0% {
+    margin-left: 80%;
+    opacity: 0;
+  }
 
-  25% {}
+  25% {
+    margin-left: 50%;
+    opacity: 0.5;
+  }
 
-  50% {}
+  50% {
+    margin-left: 20%;
+    opacity: 1;
+  }
 
-  75% {}
+  75% {
+    margin-left: 50%;
+    opacity: 0.5;
+  }
 
-  100% {}
+  100% {
+    margin-left: 80%;
+    opacity: 0;
+  }
 }
 
 @keyframes movecloud_2 {
-  0% {}
+  0% {
+    margin-left: 80%;
+    opacity: 0.5;
+  }
 
-  25% {}
+  25% {
+    margin-left: 20%;
+    opacity: 0;
+  }
 
-  50% {}
+  50% {
+    margin-left: 40%;
+    opacity: 1;
+  }
 
-  75% {}
+  75% {
+    margin-left: 70%;
+    opacity: 0.2;
+  }
 
-  100% {}
+  100% {
+    margin-left: 80%;
+    opacity: 0;
+  }
 }
 
 /*
