@@ -12,31 +12,47 @@
         let age = Number(prompt("나이를 입력해 주세요"))
         let a = prompt("성별을 입력해 주세요")
 
-        if (a == "여자") {
-            if (age >= 20) {
-                console.log("성인 여자")
-            } else if (age >= 17) {
-                console.log("고등 여학생")
-            } else if (age >= 14) {
-                console.log("중등 여학생")
-            } else if (age >= 8) {
-                console.log("초등 여학생")
+        // if (a == "여자") {
+        //     if (age >= 20) {
+        //         console.log("성인 여자")
+        //     } else if (age >= 17) {
+        //         console.log("고등 여학생")
+        //     } else if (age >= 14) {
+        //         console.log("중등 여학생")
+        //     } else if (age >= 8) {
+        //         console.log("초등 여학생")
+        //     } else {
+        //         console.log("여아")
+        //     }
+        // } else {
+        //     if (age >= 20) {
+        //         console.log("성인 남자")
+        //     } else if (age >= 17) {
+        //         console.log("고등 남학생")
+        //     } else if (age >= 14) {
+        //         console.log("중등 남학생")
+        //     } else if (age >= 8) {
+        //         console.log("초등 남학생")
+        //     } else {
+        //         console.log("남아")
+        //     }
+        // }
+
+        function ageA(a, b) {
+            if (a >= 20) {
+                console.log(`성인  ${b}`)
+            } else if (a >= 17) {
+                console.log(`고등  ${b}`)
+            } else if (a >= 14) {
+                console.log(`중등  ${b}`)
+            } else if (a >= 8) {
+                console.log(`초등  ${b}`)
             } else {
-                console.log("여아")
-            }
-        } else {
-            if (age >= 20) {
-                console.log("성인 남자")
-            } else if (age >= 17) {
-                console.log("고등 남학생")
-            } else if (age >= 14) {
-                console.log("중등 남학생")
-            } else if (age >= 8) {
-                console.log("초등 남학생")
-            } else {
-                console.log("남아")
+                console.log(`유아  ${b}`)
             }
         }
+
+        ageA(age, a)
 
     </script>
 </body>
