@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onclick + function 실습</title>
+</head>
+
+<body>
+    <script>
+        let a = prompt("첫번째 숫자를 입력해주세요")
+        let b = prompt("두번째 숫자를 입력해주세요")
+
+        function add(a, b) {
+            alert(Number(a) + Number(b))
+        }
+
+        function sub(a, b) {
+            alert(Number(a) - Number(b))
+        }
+
+        function divide(a, b) {
+            alert(Number(a) / Number(b))
+        }
+
+        function mul(a, b) {
+            alert(Number(a) * Number(b))
+        }
+    </script>
+
+    <button onclick="add(a,b)">더하기</button>
+    <button onclick="sub(a,b)">빼기</button>
+    <button onclick="mul(a,b)">곱하기</button>
+    <button onclick="divide(a,b)">나누기</button>
+</body>
+
+</html>
