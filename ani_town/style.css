@@ -36,7 +36,7 @@ section .sky .cloud_1 {
   width: 130px;
   margin-top: 100px;
   position: absolute;
-  animation: movecloud_1 6s ease-in infinite;
+  animation: movecloud_1 6s linear infinite;
 }
 
 section .sky .cloud_2 {
@@ -47,8 +47,10 @@ section .sky .cloud_2 {
 }
 
 section .city .city_img {
-  width: 100%;
-  /* position:  */
+  width: 60%;
+  position: absolute;
+  margin-top: -37%;
+  margin-left: 11%;
 }
 
 /* ANIMATION */
@@ -149,7 +151,7 @@ section .city .city_img {
   }
 
   50% {
-    margin-left: 20%;
+    margin-left: 10%;
     opacity: 1;
   }
 
@@ -166,7 +168,7 @@ section .city .city_img {
 
 @keyframes movecloud_2 {
   0% {
-    margin-left: 80%;
+    margin-left: 90%;
     opacity: 0.5;
   }
 
@@ -182,11 +184,11 @@ section .city .city_img {
 
   75% {
     margin-left: 70%;
-    opacity: 0.2;
+    opacity: 0.1;
   }
 
   100% {
-    margin-left: 80%;
+    margin-left: 90%;
     opacity: 0;
   }
 }
