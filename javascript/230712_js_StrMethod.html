@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 메소드 연습</title>
+</head>
+
+<body>
+    <script>
+        // let str = 'Happy day~! ';
+        // console.log("문자열 길이 :", str.length)
+
+
+        // console.log("대문자로 보이게: ", str.toUpperCase())
+        // console.log("소문자로 보이게: ", str.toLowerCase())
+
+
+        // console.log("인덱스 반환: ", str.indexOf("e"));
+
+
+        // console.log("문자열 슬라이싱: ", str.slice(2));
+        // console.log("문자열 슬라이싱: ", str.slice(2, 5));
+
+
+        // console.log("문자열 변경: ", str.replace('p', 'a'))
+        // console.log("문자열 변경: ", str.replaceAll('p', 'a'))
+
+
+        // console.log("문자열 반복: ", str.repeat(2))
+
+
+        // console.log("문자열 양쪽 끝 공백 제거:", str.trim())
+
+
+        // console.log("문자열을 쪼개서 배열로 저장: ", str.split(' '))
+
+
+        let hello = "Hello~";
+        let helloRvs = hello.split("").reverse().join("")
+        // ["H","e","l","l","o","~"]
+        // ["~","o","l","l","e","H"]
+        // ~olleH
+        console.log(helloRvs)
+
+        console.log(hello.split("").reverse().join("/"))
+        // ~/o/l/l/e/H
+
+        let hi = "Hi, my name is dabeen"
+        console.log("문자열 길이 :", hi.length)
+        console.log("대문자로 보이게: ", hi.toUpperCase())
+        console.log("소문자로 보이게: ", hi.toLowerCase())
+        console.log("인덱스 반환: ", hi.indexOf("e"));
+        console.log("문자열 슬라이싱: ", hi.slice(2, 6));
+
+    </script>
+</body>
+
+</html>
