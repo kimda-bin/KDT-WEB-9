@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom 실습</title>
+</head>
+
+<body>
+    <div> 값1: <input type="text" id="num1"></div>
+    <div> 값2: <input type="text" id="num2"></div>
+    <div> 연산자: <input type="text" id="value"></div>
+    <div> 결과: <input type="text" id="result"></div>
+
+    <button type="button" onclick="operat()">계산하기</button>
+    <button type="button" onclick="Reset()">초기화</button>
+
+    <script>
+        function operat() {
+            let one = Number(document.getElementById("num1").value);
+            let two = Number(document.getElementById("num2").value);
+
+            let operator = document.getElementById("value").value;
+
+            let result = 0;
+
+            if (operator == '+') {
+                result = one + two
+            } else if (operator == '-') {
+                result = one - two
+            } else if (operator == '*') {
+                result = one * two
+            } else {
+                result = one / two
+            }
+
+            document.getElementById("result").value = result
+        }
+
+        function Reset() {
+            document.getElementById("num1").value = ""
+            document.getElementById("num2").value = ""
+            document.getElementById("value").value = ""
+            document.getElementById("result").value = ""
+        }
+
+    </script>
+</body>
+
+</html>

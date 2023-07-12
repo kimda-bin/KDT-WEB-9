@@ -34,9 +34,11 @@
         <div id="red" class="box red">
         </div>
         <div id="orange" class="box orange"></div>
-        <div class="box yellow"></div>
+        <div id="yellow" class="box yellow"></div>
     </div>
     <button type="button" onclick="createGreenBox()">생겨라</button>
+    <button type="button" onclick="removeBox()">사라져라</button>
+    <!-- <button type="button" onclick="createOrangeBox()">생겨라</button> -->
 
     <script>
         let container = document.querySelector(".container")
@@ -45,16 +47,19 @@
         console.log(container.children)
 
         let redBox = document.getElementById("red")
+        let yellowBox = document.getElementById("yellow")
         // parentNode: 하나만 담음(부모는 한개니까)
-        console.log(redBox.parentNode)
+        // console.log(redBox.parentNode)
+        console.log(yellowBox.parentNode)
         // redBox.setAttribute("class", "box orange")
 
         // nextElementSibling: 형제 하나만 담음
-        console.log(redBox.nextElementSibling)
+        // console.log(redBox.nextElementSibling)
+        console.log(yellowBox.previousElementSibling)
 
 
-        let orangeBox = document.getElementById("orange")
-        console.log(orangeBox.previousElementSibling)
+        // let orangeBox = document.getElementById("orange")
+        // console.log(orangeBox.previousElementSibling)
 
 
         function createGreenBox() {
@@ -66,12 +71,34 @@
             // container.append(createBox)
             // container.appendChild(createBox)
 
-            container.append("안녕??")
+            //부모요소 (container)에 가장 첫번째 자식으로 괄호 안의 요소를 추가한다
+            // container.prepend("안녕??")
 
             // append는 매개변수로 문자열과 노드객체를 모두 받을 수 있음
             // appendChild는 매개변수로 노드객체만 받을 수 있음
 
+
+
+            // orangeBox.before(createBox)
+            orangeBox.after(createBox)
+
+
+
         }
+
+        function createOrangeBox() {
+            let createOrangeBox = document.createElement('div')
+            createOrangeBox.className = "box orange"
+            container.append(createOrangeBox)
+        }
+
+        function removeBox() {
+            let orangeBox = document.getElementById("orange")
+            // orangeBox.remove()
+            container.removeChild(orangeBox)
+        }
+
+
 
 
 
