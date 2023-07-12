@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom 실습2</title>
+    <style>
+        table {
+            border: 2px solid;
+            width: 500px;
+
+        }
+
+        th {
+            border: 1px solid;
+        }
+
+        td,
+        tr {
+            border: 1px solid;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>방명록입니다.</div>
+    <div>작성자: <input type="text" id="user"></div>
+    <div>내용: <input type="text" id="content"></div>
+    <button type="button" onclick="upload()">작성</button>
+
+    <br><br>
+
+    <table>
+        <tr>
+            <th>번호</th>
+            <th>작성자</th>
+            <th>내용</th>
+            <th>작성일</th>
+        </tr>
+    </table>
+
+    <script>
+        let number = 1;
+        function upload() {
+            let table = document.querySelector("table")
+            let tr = document.createElement("tr")
+
+            // 번호
+            let numberTd = document.createElement("td")
+            numberTd.innerText = number
+            number += 1
+
+
+            // 작성자
+            let userTd = document.createElement("td")
+            let user = document.getElementById("user").value;
+            userTd.innerText = user
+
+
+
+            // 내용
+            let contentTd = document.createElement("td")
+            let content = document.getElementById("content").value;
+            contentTd.innerText = content
+
+
+            // 작성일
+            let writeday = document.createElement("td")
+            let now = new Date()
+            let year = now.getFullYear()
+            let month = now.getMonth() + 1
+            let date = now.getDate();
+            let hour = now.getHours();
+            let minute = now.getMinutes();
+            let writeDay = `${year}-${month}-${date} ${hour} : ${minute}`
+            writeday.innerText = writeDay
+
+            tr.appendChild(numberTd)
+            tr.appendChild(userTd)
+            tr.appendChild(contentTd)
+            tr.appendChild(writeday)
+
+            table.append(tr)
+
+        }
+    </script>
+</body>
+
+</html>
