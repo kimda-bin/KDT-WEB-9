@@ -4,11 +4,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dom3</title>
+    <title>dom3_event</title>
 </head>
 
 <body>
+    <!-- <div onclick=""></div> -->
+    <button type="button">버튼</button>
+    <input type="text" name="id" id="id" placeholder="아이디를 입력해주세요">
+    <!-- <input type="text" name="id_check" id="id_check" placeholder="아이디를 입력해주세요"> -->
+    <input type="password" name="pw" id="pw" placeholder="비밀번호를 입력해주세요">
+    <input type="password" name="pw_check" id="pw_check" placeholder="비밀번호를 입력해주세요">
+    <div style="width: 100px; height: 100px; background-color: red; transition: 1s;"></div>
     <script>
+        // let btn = document.createElement("button")
+        // btn.addEventListener("click", function () {
+        //     alert("클릭")
+        // })
+
+        let button = document.querySelector("button")
+
+        button.addEventListener("click", function () {
+            alert("클릭")
+        })
+
+        // let input = document.querySelectorAll("input")
+        // for (let i = 0; i < input.length; i++) {
+        //     input[i].addEventListener("focus", (target) => {
+        //         //     // event, e, target
+        //         //     // console.log(target.currentTarget)
+        //         //     // input.style.backgroundColor = "orange"
+        //         target.currentTarget.style.backgroundColor = "black"
+        //     })
+
+        //     input[i].addEventListener("blur", (target) => {
+        //         // event, e, target
+        //         // console.log(target.currentTarget)
+        //         // input.style.backgroundColor = "orange"
+        //         target.currentTarget.style.backgroundColor = "initial"
+        //     })
+        // }
+
+
+        let input = document.getElementById("pw")
+        input.addEventListener("keyup", (e) => {
+            if (e.key == "Enter") {
+                alert("로그인")
+            }
+        })
+
+
+
+        document.getElementById("pw_check").addEventListener("change", (e) => {
+            if (input.value == e.currentTarget.value) {
+                alert("같다")
+            } else {
+                alert("다르다")
+            }
+        })
+
+        // window.addEventListener("load", () => {
+        //     let div = document.querySelector("div")
+        //     div.style.marginLeft = "100px"
+        // })
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth >= 400) {
+                console.log("크다")
+            }
+        })
+
+        // let inputIdCheck = document.getElementById("id_check")
+        // let inputId = document.getElementById("id")
+
+        // inputIdCheck.addEventListener("change", (target) => {
+        //     if (inputId.value == target.currentTarget.value) {
+        //         alert("같다")
+        //     } else {
+        //         alert("다르다")
+        //     }
+        // })
+
+
+
+
 
     </script>
 </body>
