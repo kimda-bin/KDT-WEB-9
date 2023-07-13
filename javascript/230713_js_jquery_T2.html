@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery 실습2</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+        integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .navy {
+            background-color: navy;
+        }
+
+        .purple {
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box red" onclick="switchColor2()">
+
+    </div>
+
+    <script>
+        function changeColor() {
+            let arrayColor = [".red", ".orange", ".yellow", ".green", ".blue", ".navy", ".purple"]
+            if ($(".box").hasClass("red")) {
+                $(".box").switchClass("red", "orange", 1000)
+            } else if ($(".box").hasClass("orange")) {
+                $(".box").switchClass("orange", "yellow", 1000)
+            } else if ($(".box").hasClass("yellow")) {
+                $(".box").switchClass("yellow", "green", 1000)
+            }
+            else if ($(".box").hasClass("green")) {
+                $(".box").switchClass("green", "blue", 1000)
+            } else if ($(".box").hasClass("blue")) {
+                $(".box").switchClass("blue", "navy", 1000)
+            } else if ($(".box").hasClass("navy")) {
+                $(".box").switchClass("navy", "purple", 1000)
+            } else {
+                $(".box").switchClass("purple", "red", 1000)
+            }
+
+            $(".box").switchClass("red", "orange", 1000)
+
+
+
+        }
+
+
+        // const arrayColor = ["red", "orange", "yellow", "green", "blue", "navy", "purple"]
+        // let num = 0;
+        // function changeColor2() {
+        //     $(".box").switchClass(arrayColor[num], arrayColor[num + 1])
+        //     num++;
+
+        //     if (num === arrayColor.length - 1) num = 0;
+        // }
+
+        // 왜 오류나는지?
+        let colors = ["red", "orange", "yellow", "green", "blue", "purple"]
+        let num = 0;
+        function switchColor2() {
+            $(".box").switchClass(colors[num], colors[num + 1])
+            num++;
+
+            if (num === colors.length - 1) num = 0;
+
+
+        }
+    </script>
+</body>
+
+</html>
