@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 웹 연습</title>
+    <!-- <style>
+        body {
+            background-color: indianred;
+            color: white;
+        }
+
+        .box {
+            font-size: 100px;
+        }
+
+        /* @media 유형 and (크기 조건){} */
+        /* 유형 : screen, all, print */
+        /* 크기 조건: max/min - width/height */
+        /* max-width : 오른쪽에 나온 숫자 값 "이하"일 때 */
+        /* min-width : 오른쪽에 나온 숫자 값 "이상"일 때 */
+        /* 바뀌는 값이나 추가된 값만 쓰면 된다 */
+
+        @media screen and (max-width: 700px) {
+            body {
+                background-color: green;
+                /* font-family: serif; */
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            body {
+                background-color: yellow;
+
+            }
+        }
+
+        @media screen and (max-width: 300px) {
+            body {
+                background-color: black;
+
+            }
+        }
+
+        /* @media print {
+            .box {
+                display: none;
+            }
+        } */
+    </style> -->
+
+    <style>
+        body {
+            background-color: black;
+        }
+
+        /* @media screen and (min-width: 300px) {
+            body {
+                background-color: yellow;
+            }
+        }
+
+        @media screen and (min-width: 500px) {
+            body {
+                background-color: green;
+            }
+        } */
+
+        @media screen and (orientation: landscape) {
+            body {
+                background-color: blue;
+            }
+        }
+
+        @media screen and (orientation: portrait) {
+            body {
+                background-color: tomato;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box">hi</div>
+</body>
+
+</html>
