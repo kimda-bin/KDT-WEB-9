@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
         integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
     <style>
-        .box {
+        /* .box {
             width: 100px;
             height: 100px;
         }
@@ -21,17 +21,69 @@
 
         .orange {
             background-color: orange;
+        } */
+        .container {
+            height: 2000px;
         }
     </style>
 </head>
 
 <body>
-    <div class="box orange"></div>
-    <button type="button" onclick="switchColor()">바껴라</button>
+    <!-- <div class="box orange"></div>
+    <button type="button" onclick="switchColor()">바껴라</button> -->
+    <div class="container">
+        <input type="text" name="id" id="id">
+    </div>
+    <button type="button">버튼</button>
     <script>
-        function switchColor() {
-            $(".box").switchClass("orange", "red", 1000)
-        }
+        // function switchColor() {
+        //     $(".box").switchClass("orange", "red", 1000)
+        // }
+
+        // 이벤트 리스너
+        window.addEventListener("load", function () { })
+
+        // $(window).ready(function () { // 페이지 로드 완료 후에 실행되는 함수
+        //     $(".container").append(`<h1>안녕</h1>`)
+        // })
+
+        // $(function () { // 페이지 로드 완료 후에 실행되는 함수
+        //     $(".container").append(`<h1>안녕</h1>`)
+        // })
+
+
+        // 마우스 이벤트
+        // $("button").on("click", function () {
+        //     alert("클릭")
+        // })
+        // $("button").click(function () {
+        //     alert("클릭")
+        // })
+
+        // hover : 요소 영역에 마우스가 올라가 있는 동안
+        // $("button").hover(function () {
+        //     alert("클릭")
+        // })
+
+
+        // mouseover : 요소 영역에 마우스가 올라가는 순간
+        // $("button").mouseover(function () {
+        //     alert("클릭")
+        // })
+
+        // $(window).scroll(function () {
+        //     console.log("scrolling")
+        // })
+
+
+        // 키보드 이벤트
+        // $("input").keydown(function (e) {
+        //     console.log(e.key === "Enter")
+        // })
+
+        // $("input").keyup(function (e) {
+        //     console.log(e.key === "Enter")
+        // })
 
     </script>
 </body>

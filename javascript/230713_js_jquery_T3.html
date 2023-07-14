@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery 실습3</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+        integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+
+    <style>
+        table {
+            width: 500px;
+            height: 500px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>날짜 : <input type="text" id="date"></div>
+    <div>내용 : <input type="text" id="content"></div>
+    <button type="button" onclick="upload()">작성</button>
+    <div style="color: green; font-size: 30px; font-weight: 700;">2023년 7월</div>
+    <!-- td태그 안에 p태그를 넣어야 한다~ 그래야 추가했을때 모양이 괜찮다~ -->
+    <table>
+        <tr>
+            <th>일</th>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+            <th>토</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+            <td>21</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+            <td>28</td>
+            <td>29</td>
+        </tr>
+        <tr>
+            <td>30</td>
+            <td>31</td>
+
+        </tr>
+    </table>
+
+    <script>
+        let td = null;
+
+        // 이벤트 리스너(날짜 클릭하면 값 넣기)
+        $('td').on('click', function () {
+            td = this;
+            // 클릭한 요소의 날짜
+            let date = $(this).text()
+            // 날짜 값 넣기
+            $("#date").val(date)
+        })
+
+        // 추가는 되는데 뭔가 css가 이상,,,
+        function upload() {
+            let content = $("#content").val()
+            $(td).append(`<div> ${content} </div>`)
+
+            // for (let i = 1; i < date.length; i++) {
+            //     if (dateValue === date[i]) {
+            //         $(td).after(`<div> ${content} </div>`)
+            //     }
+            // }
+
+
+        }
+
+    </script>
+</body>
+
+</html>
