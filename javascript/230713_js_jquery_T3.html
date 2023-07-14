@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -19,11 +19,13 @@
         }
 
         tr>td:first-child>p,
+        tr>td:first-child>div,
         tr>th:first-child {
             color: red;
         }
 
         tr>td:last-child>p,
+        tr>td:last-child>div,
         tr>th:last-child {
             color: blue;
         }
@@ -38,12 +40,12 @@
 
 <body>
 
-    <div>날짜 : <input type="text" id="date"></div>
-    <br>
-    <div>내용 : <input type="text" id="content"></div>
-    <br>
-    <button type="button" onclick="upload()">작성</button>
-    <br>
+    <div>
+        날짜 : <input type="text" id="date" readonly><br>
+        내용 : <input type="text" id="content"><br>
+        <button type="button" onclick="upload()">작성</button><br>
+    </div>
+
     <div style="font-size: 2em; color: green; text-align: center">2023년 7월</div>
     <!-- td태그 안에 p태그를 넣어야 한다~ 그래야 추가했을때 모양이 괜찮다~ -->
     <table align="center" width="90%" style="text-align: center">
@@ -201,26 +203,23 @@
         let td = null;
 
         // 이벤트 리스너(날짜 클릭하면 값 넣기)
-        $('td').on('click', function () {
+        $('td > p').on('click', function () {
             td = this;
             // 클릭한 요소의 날짜
-            let date = $(this).text()
+            let date = $(td).text()
             // 날짜 값 넣기
             $("#date").val(date)
         })
 
-        // 추가는 되는데 뭔가 css가 이상,,,
         function upload() {
             let content = $("#content").val()
-            $(td).parent().append(`<div> ${content} </div>`)
+            $(td).parent().append(`<div>${content}</div>`)
 
             // for (let i = 1; i < date.length; i++) {
             //     if (dateValue === date[i]) {
             //         $(td).after(`<div> ${content} </div>`)
             //     }
             // }
-
-
         }
 
     </script>
