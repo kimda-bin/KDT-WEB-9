@@ -54,7 +54,7 @@
 
     <script>
         function changeColor() {
-            let arrayColor = [".red", ".orange", ".yellow", ".green", ".blue", ".navy", ".purple"]
+            // let arrayColor = [".red", ".orange", ".yellow", ".green", ".blue", ".navy", ".purple", ".red"]
             if ($(".box").hasClass("red")) {
                 $(".box").switchClass("red", "orange", 1000)
             } else if ($(".box").hasClass("orange")) {
@@ -88,8 +88,8 @@
         //     if (num === arrayColor.length - 1) num = 0;
         // }
 
-        // 왜 오류나는지?
-        let colors = ["red", "orange", "yellow", "green", "blue", "purple"]
+        // 왜 오류나는지?(해결)
+        let colors = ["red", "orange", "yellow", "green", "blue", "purple", "red"]
         let num = 0;
         function switchColor2() {
             $(".box").switchClass(colors[num], colors[num + 1])

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid 실습</title>
+    <style>
+        .container {
+            display: grid;
+            width: 100%;
+            height: 100%;
+            grid-template-columns: repeat(6, 400px);
+            grid-template-rows: repeat(4, 300px);
+
+            grid-template-areas:
+                'one one one one one one '
+                'two three three three three four'
+                'two five five six six four'
+                'seven seven seven seven seven seven';
+        }
+
+        .font {
+            display: flex;
+            font-size: 80px;
+            font-weight: 700;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+        .one {
+            grid-area: one;
+            background-color: #F94144;
+        }
+
+        .two {
+            grid-area: two;
+            background-color: #F3722c;
+        }
+
+        .three {
+            grid-area: three;
+            background-color: #F9C74F;
+        }
+
+        .four {
+            grid-area: four;
+            background-color: #43AA8B;
+        }
+
+        .five {
+            grid-area: five;
+            background-color: #F8961E;
+        }
+
+        .six {
+            grid-area: six;
+            background-color: #90BE6D;
+        }
+
+        .seven {
+            grid-area: seven;
+            background-color: #4444FF;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="one font">#F94144</div>
+        <div class="two font">#F3722c</div>
+        <div class="three font">#F9C74F</div>
+        <div class="four font">#43AA8B</div>
+        <div class="five font">#F8961E</div>
+        <div class="six font">#90BE6D</div>
+        <div class="seven font">#4444FF</div>
+    </div>
+</body>
+
+</html>
