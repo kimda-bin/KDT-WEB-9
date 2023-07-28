@@ -4,6 +4,8 @@
 
 const http = require('http');
 const fs = require('fs');
+
+// 요청, 응답
 const server = http.createServer(function (req, res) {
     // // 요청하고 나서 번호
     // res.writeHead(200)
