@@ -50,11 +50,21 @@ app.use(express.static('./public'))
 // ---------------------------------------------------------------
 
 //실습(T1)
+// app.set('view engine', 'ejs');
+// app.set('views', './views');
+
+// app.get('/kdt9', (req, res) => {
+//     // views 폴더 안 T1 파일 읽기
+//     // render() 뷰 엔진 렌더링
+//     res.render('T1')
+// })
+
+//실습(T2)
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
 app.get('/kdt9', (req, res) => {
-    // views 폴더 안 test 파일 읽기
+    // views 폴더 안 T2 파일 읽기
     // render() 뷰 엔진 렌더링
-    res.render('T1')
+    res.render('T2')
 })

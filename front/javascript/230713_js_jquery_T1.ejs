@@ -8,21 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
-    <style>
-        div {
-            width: 200px;
-            height: 200px;
-        }
-
-        button {
-            color: white;
-            background-color: black;
-        }
-    </style>
-
-    <style>
-
-    </style>
+    <link rel="stylesheet" href="/css/style2.css">
 </head>
 
 <body>
@@ -33,24 +19,23 @@
     <button onclick="grape()">포도</button>
     <button onclick="peach()">복숭아</button>
 
-    <div></div>
 
     <script>
 
         function apple() {
-            $("div").css("background-image", "url(../image/사과.jpg)")
+            $("div").css("background-image", "url(/img/사과.jpg)")
         }
 
         function banana() {
-            $("div").css("background-image", "url(../image/바나나.jpg)")
+            $("div").css("background-image", "url(/img/바나나.jpg)")
         }
 
         function grape() {
-            $("div").css("background-image", "url(../image/포도.jpg)")
+            $("div").css("background-image", "url(/img/포도.jpg)")
         }
 
         function peach() {
-            $("div").css("background-image", "url(../image/복숭아.jpg)")
+            $("div").css("background-image", "url(/img/복숭아.jpg)")
         }
 
     </script>

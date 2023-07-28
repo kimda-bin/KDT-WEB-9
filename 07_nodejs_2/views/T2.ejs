@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery 실습</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styleT2.css">
+</head>
+
+<body>
+    <div>
+    </div>
+    <button onclick="apple()">사과</button>
+    <button onclick="banana()">바나나</button>
+    <button onclick="grape()">포도</button>
+    <button onclick="peach()">복숭아</button>
+
+
+
+    <script>
+
+        function apple() {
+            $("div").css("background-image", "url(/img/사과.jpg)")
+        }
+
+        function banana() {
+            $("div").css("background-image", "url(/img/바나나.jpg)")
+        }
+
+        function grape() {
+            $("div").css("background-image", "url(/img/포도.jpg)")
+        }
+
+        function peach() {
+            $("div").css("background-image", "url(/img/복숭아.jpg)")
+        }
+
+    </script>
+</body>
+
+</html>
