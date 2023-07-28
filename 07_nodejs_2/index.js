@@ -64,7 +64,31 @@ app.set('view engine', 'ejs');
 app.set('views', './views');
 
 app.get('/kdt9', (req, res) => {
-    // views 폴더 안 T2 파일 읽기
-    // render() 뷰 엔진 렌더링
+
     res.render('T2')
 })
+
+
+//실습(T2) 다른방법으로 해보기(하는즁)
+const name = ["사과", '바나나', '포도', '복숭아']
+
+app.set('view engine', 'ejs');
+app.set('views', './views');
+
+app.get('/T2', (req, res) => {
+    // res.send(name);
+    res.render('230728_express_T2', name)
+})
+
+
+//실습(T3) 
+const num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+app.set('view engine', 'ejs');
+app.set('views', './views');
+
+app.get('/T3', (req, res) => {
+    res.render('230728_express_T3', { num })
+})
+
+
