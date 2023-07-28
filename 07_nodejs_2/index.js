@@ -92,3 +92,17 @@ app.get('/T3', (req, res) => {
 })
 
 
+//실습(T4)
+app.get('/T4_1', (req, res) => {
+    res.render('230728_express_T4_1')
+})
+
+app.get('/T4_2', (req, res) => {
+    res.render('230728_express_T4_2')
+})
+
+app.get('/T4_3', (req, res) => {
+    res.render('230728_express_T4_3')
+})
+
+
