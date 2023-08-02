@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T1</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <form name="register">
+        이름<input type="text" name="name">
+        <fieldset>
+            <legend>성별</legend>
+            <input type="radio" name="gender" value="남자"> 남자
+            <input type="radio" name="gender" value="여자"> 여자
+
+        </fieldset>
+        <fieldset>
+            <legend>생년월일</legend>
+            <select name="birthday_year" id="birthday_year">
+                <%for(let i=1900; i < 2020; i++){ %>
+                    <option value="<%= i %>">
+                        <%= i%>
+                    </option>
+                    <%}%>
+            </select>
+            <label for="birthday_year">년</label>
+            <select name="birthday_month" id="birthday_month">
+                <%for(let i=1; i < 20; i++){ %>
+                    <option value="<%= i %>">
+                        <%= i%>
+                    </option>
+                    <%}%>
+            </select>
+            <label for="birthday_month">월</label>
+            <select name="birthday_day" id="birthday_day">
+                <%for(let i=1; i < 32; i++){ %>
+                    <option value="<%= i %>">
+                        <%= i%>
+                    </option>
+                    <%}%>
+            </select>
+            <label for="birthday_day">일</label>
+        </fieldset>
+        <fieldset>
+            <legend>관심사</legend>
+            <input type="checkbox" class="favorite" value="여행">
+            <label for="여행">여행</label>
+            <input type="checkbox" class="favorite" value="패션">
+            <label for="패션">패션</label>
+            <input type="checkbox" class="favorite" value="음식">
+            <label for="음식">음식</label>
+        </fieldset>
+        <br>
+        <button type="button" onclick="registerClick()">회원가입</button>
+
+        <div class="register_result"></div>
+
+        <script>
+            const resultBox = document.querySelector('.register_result');
+            function registerClick() {
+                const form = document.forms['register'];
+                const faResult = []
+                const fa = document.querySelectorAll('.favorite:checked');
+                fa.forEach((fa) => {
+                    faResult.push(fa.value)
+                })
+                console.log(faResult)
+                const data = {
+                    name: form.name.value,
+                    gender: form.gender.value,
+                    birth_year: form.birthday_year.value,
+                    birth_month: form.birthday_month.value,
+                    brith_day: form.birthday_day.value,
+                    favorite: faResult
+                };
+
+                console.log('axios get')
+
+                axios({
+                    method: 'GET',
+                    url: 'register_result',
+                    params: data
+                }).then(res => {
+                    resultBox.textContent = ` ${res.data.name}님은 ${res.data.gender}입니다! 
+                \n 생년월일은 ${res.data.birth_year}-${res.data.birth_month}-${res.data.brith_day}이고 
+                \n 취미는 ${res.data.favorite} 입니다!`
+
+                });
+            }
+        </script>
+    </form>
+
+</body>
+
+</html>
