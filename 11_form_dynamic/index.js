@@ -66,6 +66,15 @@ app.get('/register_result', (req, res) => {
     res.send(req.query)
 })
 
+// 리더님 풀이
+// app.get('/axiosGet', (req, res) => {
+//     res.render('get');
+// });
+// app.get('/resultGet', (req, res) => {
+//     res.send({ result: true, data: req.query });
+// });
+
+
 // T2
 app.get('/T2', (req, res) => {
     res.render('T2')
@@ -81,6 +90,20 @@ app.post('/login_result', (req, res) => {
         res.send("false")
     }
 })
+
+// 리더님 풀이
+// app.get('/axiosPost', (req, res) => {
+//     res.render('post');
+// });
+// app.post('/resultPost', (req, res) => {
+//     const id = 'kdt9';
+//     const pw = '1234';
+//     if (id === req.body.username && pw === req.body.password) {
+//         res.send({ result: true, userInfo: req.body });
+//     } else {
+//         res.send({ result: false, userInfo: null });
+//     }
+// });
 
 
 // --------------------------------------------------------------------
