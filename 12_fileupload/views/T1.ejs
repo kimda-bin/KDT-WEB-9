@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T1</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+    <form>
+        <div>개인 정보</div>
+        <br>
+        <label for="id">아이디:</label>
+        <input type="text" name="id" id="id">
+        <br>
+        <label for="pw">비밀번호:</label>
+        <input type="text" name="pw" id="pw">
+        <br>
+        <label for="name">이름:</label>
+        <input type="text" name="name" id="name">
+        <br>
+        <label for="age">나이:</label>
+        <input type="text" name="age" id="age">
+        <br>
+        <label for="imagefile">프로필 사진:</label>
+        <input type="file" name="imagefile" id="file">
+        <br>
+        <button type="button" onclick="resets()">리셋</button>
+        <button type="button" onclick="join()">회원가입</button>
+        <div class="result"></div>
+    </form>
+
+    <script>
+        const resultBox = document.querySelector('.result')
+        function join() {
+            const file = document.getElementById('file')
+            const user = document.getElementById('id')
+            console.log(file.files[0])
+            const formData = new FormData()
+
+            formData.append('user', user.value)
+            formData.append('file', file.files[0])
+
+            axios({
+                method: 'POST',
+                url: '/joinT1',
+                data: formData,
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            }).then((res) => {
+                console.log('res', res)
+                resultBox.innerHTML = `<div><img src=${res.data.path}></div>`
+            })
+        }
+        function resets() {
+            console.log('first')
+            const resultBox = document.querySelector('.result > div')
+            console.log(resultBox)
+            const resetData = document.querySelectorAll('input')
+            resetData.forEach((a) => {
+                a.value = "";
+            })
+            resultBox.remove()
+        }
+    </script>
+</body>
+
+</html>
