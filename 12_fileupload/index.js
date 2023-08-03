@@ -92,6 +92,35 @@ app.post('/joinT1', uploadJoin.single('file'), (req, res) => {
     res.send(req.file)
 })
 
+
+
+// 리더님 코드
+//multer세팅
+// const uploadDetail = multer({
+//     storage: multer.diskStorage({
+//         destination(req, file, done) {
+//             done(null, 'uploads/');
+//         },
+//         filename(req, file, done) {
+//             console.log('filename: ', req.body);
+//             const ext = path.extname(file.originalname);
+//             done(null, req.body.userId + Date.now() + ext);
+//         },
+//     }),
+//     limits: { fileSize: 10 * 1024 * 1024 },
+// });
+
+//router
+// app.get('/', (req, res) => {
+//     res.render('index');
+// });
+// app.post('/result', uploadDetail.single('profile'), (req, res) => {
+//     res.render('result', {
+//         userInfo: req.body,
+//         profile: req.file.path,
+//     });
+// });
+
 // -----------------------------------------------------------------
 
 //server
