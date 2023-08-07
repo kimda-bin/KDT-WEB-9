@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <form name="login">
+        아이디: <input type="text" name="id">
+        <br>
+        비밀번호: <input type="text" name="pw">
+    </form>
+    <button type="button" onclick="loginEvent()">로그인</button>
+    <div class="login_result"></div>
+    <script>
+        const resultBox = document.querySelector('.login_result');
+        function loginEvent() {
+            const form = document.forms['login'];
+            const data = {
+                id: form.id.value,
+                pw: form.pw.value
+            }
+            console.log('axios get')
+
+            axios({
+                method: 'POST',
+                url: 'user',
+                data
+            }).then(res => {
+                console.log('res', res)
+                if (res.data == true) {
+                    resultBox.textContent = '로그인에 성공했습니다'
+                    resultBox.style.color = 'blue'
+                } else {
+                    resultBox.textContent = '로그인에 실패했습니다'
+                    resultBox.style.color = 'red'
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
