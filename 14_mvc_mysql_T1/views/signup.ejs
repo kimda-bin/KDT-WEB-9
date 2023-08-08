@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>회원가입</title>
+</head>
+
+<body>
+    <form name="user">
+        <input type="text" id="name" placeholder="이름을 입력해주세요"><br>
+        <input type="text" id="userid" placeholder="아이디를 입력해주세요"><br>
+        <input type="password" id="pw" placeholder="비밀번호를 입력해주세요"><br>
+        <button type="button" onclick="joinus()">회원가입</button>
+    </form>
+
+    <script>
+        function joinus() {
+            const form = document.forms['user']
+            axios({
+                method: 'POST',
+                url: '/user/signupData',
+                data: {
+                    name: form.name.value,
+                    userid: form.userid.value,
+                    pw: form.pw.value
+                }
+            }).then(res => {
+                console.log('res', res)
+                window.location.href = '/user/signin'
+            })
+        }
+    </script>
+</body>
+
+
+
+</html>

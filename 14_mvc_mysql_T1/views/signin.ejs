@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <form action="/user/profile" name="user" id="user">
+        <input type="text" id="userid" placeholder="아이디를 입력해주세요"><br>
+        <input type="password" id="pw" placeholder="비밀번호를 입력해주세요">
+        <input type="hidden" id="name"><br>
+        <button type="button" onclick="login()">로그인</button>
+    </form>
+
+    <!-- <form action="/user/profile" name="submitUser" id="submitUser" method="post">
+        <input type="hidden" id="userid">
+        <input type="hidden" id="name">
+    </form> -->
+
+
+    <script>
+        function login() {
+            const form = document.forms['user']
+            // const hform = document.forms['submitUser']
+            axios({
+                method: 'POST',
+                url: '/user/signinData',
+                data: {
+                    userid: form.userid.value,
+                    pw: form.pw.value
+                }
+            }).then(res => {
+                if (form.userid.value == res.data[0].userid && form.pw.value == res.data[0].pw) {
+                    // hform.userid.value = form.userid.value
+                    form.name.value = res.data[0].name
+                    // axios({
+                    //     method: 'POST',
+                    //     url: '/user/profile',
+                    //     data: {
+                    //         userid: hform.userid.value,
+                    //         name: hform.name.value
+                    //     }
+                    // })
+                    document.getElementById('user').submit()
+
+                    // window.location.href = '/user/profile'
+                } else {
+                    alert('아이디와 비밀번호가 일치하지 않습니다')
+                    window.location.reload()
+                }
+            })
+
+
+        }
+    </script>
+</body>
+
+</html>
