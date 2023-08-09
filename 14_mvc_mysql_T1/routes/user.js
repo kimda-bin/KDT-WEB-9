@@ -15,5 +15,9 @@ router.post('/signinData', controller.userSignin)
 
 router.post('/profile', controller.Profile)
 
+router.patch('/edit', controller.editUser)
+
+router.delete('/delete', controller.deleteUser)
+
 
 module.exports = router;
