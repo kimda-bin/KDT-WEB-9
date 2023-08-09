@@ -13,7 +13,6 @@ export const signin = (req, res) => {
     res.render('signin');
 };
 
-
 export const post_signup = async (req, res) => {
     try {
         await User.post_signup(req.body)
