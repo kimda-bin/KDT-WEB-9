@@ -19,5 +19,7 @@ router.patch('/edit', controller.editUser)
 
 router.delete('/delete', controller.deleteUser)
 
+router.get('/findall', controller.findall);
+
 
 module.exports = router;

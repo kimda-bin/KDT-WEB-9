@@ -17,4 +17,6 @@ router.patch('/edit', controller.patchVisitor)
 
 // //delete /visitor/delete : 방명록 하나 삭제
 router.delete('/delete', controller.deleteVisitor)
+
+
 module.exports = router;

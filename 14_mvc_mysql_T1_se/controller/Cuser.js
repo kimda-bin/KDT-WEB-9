@@ -1,5 +1,6 @@
 // const User = require('../models/User');
 const models = require('../models');
+const { Op } = require('sequelize')
 
 exports.main = (req, res) => {
     res.render('index')
@@ -93,4 +94,20 @@ exports.deleteUser = (req, res) => {
         res.send({ result: true });
     })
 }
+
+exports.findall = (req, res) => {
+    models.User.findAll({
+        //attributes 원하는 컬럼 조회
+        //attributes: ['name', 'userid'],
+        //Op.gt(초과), Op.gte(이상), Op.lt(미만), Op.ne(같지않은)
+        //Op.or(또는), Op.in(배열 요소중 하나), Op.notIn(배열요소와 모두다름)
+        //where: { id: { [Op.gt]: 2 } },
+        order: [['id', 'DESC']],
+        limit: 1,
+        offset: 1,
+    }).then((result) => {
+        console.log('findAll', result);
+        res.send(result);
+    });
+};
 
