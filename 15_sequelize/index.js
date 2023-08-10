@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const PORT = 8000;
+const db = require('./models')
 
 app.set('view engine', 'ejs');
 app.set('views', './views');
@@ -90,6 +91,9 @@ app.use('*', (req, res) => {
     res.render('404');
 })
 
-app.listen(PORT, () => {
-    console.log(`http://localhost:${PORT}`)
-});
+//테이블이 없으면 자동으로 생성해줌(visitors)
+db.sequelize.sync({ force: false }).then(() => {
+    app.listen(PORT, () => {
+        console.log(`http://localhost:${PORT}`)
+    });
+})
