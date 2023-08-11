@@ -14,7 +14,7 @@ db.Classes = require('./Classes')(sequelize)
 db.StudentProfile = require('./StudentProfile')(sequelize)
 
 
-//관계형성
+//관계형성(직접 외래키 설정 안하면 알아서 해줌)
 //1:다 학생과 강의
 db.Student.hasMany(db.Classes)
 db.Classes.belongsTo(db.Student)
