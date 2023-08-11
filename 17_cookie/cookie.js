@@ -8,7 +8,12 @@ app.set('view engine', 'ejs')
 //cookie-parser
 
 //일반쿠키
-app.use(cookieParser())
+//app.use(cookieParser())
+
+//암호화쿠키
+app.use(cookieParser("asdfqsfsfver"))
+
+
 //cookie option 객체
 const cookieConfig = {
     //httpOnly: 웹 서버를 통해서만 쿠키에 접근가능
@@ -21,6 +26,7 @@ const cookieConfig = {
     //signed: 쿠키의 암호화를 결정(req.seignedCookies 객체에 들어있음)
     httpOnly: true,
     maxAge: 60 * 1000, //1분
+    signed: true
 
 }
 
@@ -36,7 +42,8 @@ app.get('/setCookie', (req, res) => {
 })
 
 app.get('/getCookie', (req, res) => {
-    res.send(req.cookies)
+    //res.send(req.cookies)
+    res.send(req.signedCookies)
 })
 
 app.get('/clearCookie', (req, res) => {
