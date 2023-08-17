@@ -6,7 +6,7 @@ const conn = mysql.createPool({
     host: 'test-kdt.c8ggmvrm3iwr.ap-northeast-2.rds.amazonaws.com',
     user: 'admin',
     password: '123456789',
-    database: 'user',
+    database: 'kdt9',
     port: 3306,
 });
 //createConnection : 단일 연결, 매번 연결이 필요할 때 마다 새로운 연결 생성
