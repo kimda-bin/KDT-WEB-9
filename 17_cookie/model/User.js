@@ -9,7 +9,6 @@ const conn = mysql.createPool({
     database: 'kdt9',
     port: 3306,
 });
-
 //createConnection : 단일 연결, 매번 연결이 필요할 때 마다 새로운 연결 생성
 //연결 수가 많아지면 성능에 영향이 생김
 //createPool: 여러연결, 여러개의 연결을 미리 생성하고 관리
