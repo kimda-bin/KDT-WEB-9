@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>회원 리스트</h1>
+    <ul>
+        <% for(let i=0; i < userlist.length; i++){ %>
+            <li>
+                <b>
+                    이름: <%= userlist[i].name %> / 성별: <%= userlist[i].gender %> / 전공:<%= userlist[i].major %>
+                </b>
+            </li>
+            <%}%>
+    </ul>
+
+    <a href="/useradd">회원추가하기</a>
+</body>
+
+
+</html>
