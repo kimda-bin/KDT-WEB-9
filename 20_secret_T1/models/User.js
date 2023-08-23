@@ -4,16 +4,20 @@ const User = function (sequelize, DataTypes) {
             id: {
                 type: DataTypes.INTEGER,
                 primaryKey: true,
-                autoincrement: true
+                allowNull: false,
+                autoIncrement: true,
             },
             userid: {
                 type: DataTypes.STRING(15),
+                allowNull: false,
             },
             name: {
                 type: DataTypes.STRING(15),
+                allowNull: false,
             },
             pw: {
-                type: DataTypes.STRING(500),
+                type: DataTypes.STRING(255),
+                allowNull: false,
             }
         },
         {
