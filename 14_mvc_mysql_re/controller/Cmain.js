@@ -19,8 +19,12 @@ const signin = (req, res) => {
 }
 
 //회원정보 조회 페이지
-const userinfo = (req, res) => {
-    res.render('userinfo')
+const profile = (req, res) => {
+    console.log(req.params)
+    console.log(req.query)
+    model.db_profile(req.params, (result) => {
+        res.render('userinfo', { data: result[0] })
+    })
 }
 
 /////////////////////////////////////////
@@ -47,6 +51,7 @@ const post_signin = (req, res) => {
 
 /////////////////////////////////////////
 //PATCH
+//회원정보 수정
 const userupdate = (req, res) => {
     model.db_userupdate(req.body, () => {
         res.json({ result: true })
@@ -59,7 +64,7 @@ module.exports = {
     main,
     signup,
     signin,
-    userinfo,
+    profile,
     post_signup,
     post_signin,
     userupdate
