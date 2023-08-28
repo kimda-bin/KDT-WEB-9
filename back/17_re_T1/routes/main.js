@@ -13,6 +13,13 @@ router.post('/signup', controller.post_signup)
 router.get('/signin', controller.signin)
 router.post('/signin', controller.post_signin)
 
+router.get('/profile/:number', controller.profile);
+//회원정보수정 =>PATCH
+router.patch('/profile/edit', controller.edit_profile);
+
+//회원탈퇴
+router.delete('/destroy', controller.destroy);
+
 //회원전체 리스트 페이지
 router.get('/userlist', controller.userlist)
 
