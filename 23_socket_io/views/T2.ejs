@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="width: 200px; height: 300px;">
+
+    </div>
+
+    <input type="text" id="message" placeholder="채팅내용"><br>
+    <button onclick="chating()">채팅</button>
+
+
+    <script>
+
+        const div = document.querySelector('div')
+        //클라이언트 소켓 연결
+        const socket = io()
+        const msg = document.querySelector('#message')
+
+        const chatRoom = prompt('채팅방명을 입력하세요')
+        socket.emit('join', chatRoom)
+
+        function chating() {
+            socket.emit('message', msg.value)
+            msg.value = ''
+        }
+
+        socket.on('chat', (data, id) => {
+            // console.log(socket.rooms)
+            // console.log(res)
+            console.log(id)
+            console.log(socket.id)
+            if (id == socket.id) {
+                div.innerHTML += `<div align="right"> ${data} </div><br>`
+            } else {
+                div.innerHTML += `<div align="left"> ${data} </div><br>`
+            }
+            //div.innerHTML = `<div align="right"> ${res} </div>`
+        })
+
+    </script>
+</body>
+
+</html>

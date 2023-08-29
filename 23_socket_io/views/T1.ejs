@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>hello world</h1>
+    <button id="hello">hello</button>
+    <button id="study">study</button>
+    <button id="bye">bye</button><br>
+    <div></div>
+
+    <script>
+        const socket = io()
+        const div = document.querySelector('div')
+        const hello = document.querySelector('#hello')
+        const study = document.querySelector('#study')
+        const bye = document.querySelector('#bye')
+
+        hello.addEventListener('click', () => {
+            socket.emit('hello', { name: 'hello', message: '안녕하세요' })
+        })
+
+        study.addEventListener('click', () => {
+            socket.emit('study', { name: 'study', message: '공부합시다' })
+        })
+
+        bye.addEventListener('click', () => {
+            socket.emit('bye', { name: 'bye', message: '잘가' })
+        })
+
+        socket.on('backend_arg', (arg) => {
+            div.textContent = `${arg.name}: ${arg.message}`
+        })
+    </script>
+</body>
+
+</html>
