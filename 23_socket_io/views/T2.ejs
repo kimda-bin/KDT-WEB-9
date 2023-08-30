@@ -6,10 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/socket.io/socket.io.js"></script>
     <title>Document</title>
+
+    <style>
+        #mychat {
+            display: flex;
+            width: 30px;
+            background-color: yellow;
+            justify-content: center;
+        }
+
+        #otherchat {
+            display: flex;
+            width: 30px;
+            background-color: rgb(186, 186, 255);
+            justify-content: center;
+        }
+    </style>
 </head>
 
 <body>
-    <div style="width: 200px; height: 300px;">
+    <div style="width: 200px; height: 300px; background-color: aquamarine;">
 
     </div>
 
@@ -32,15 +48,15 @@
             msg.value = ''
         }
 
-        socket.on('chat', (data, id) => {
+        socket.on('chat', (info) => {
             // console.log(socket.rooms)
             // console.log(res)
-            console.log(id)
-            console.log(socket.id)
-            if (id == socket.id) {
-                div.innerHTML += `<div align="right"> ${data} </div><br>`
+            //console.log(id)
+            //console.log(socket.id)
+            if (info.id == socket.id) {
+                div.innerHTML += `<div align="right"> <p id='mychat'>${info.message}</p> </div><br>`
             } else {
-                div.innerHTML += `<div align="left"> ${data} </div><br>`
+                div.innerHTML += `<div align="left"> <p  id='otherchat'>${info.message}</p> </div><br>`
             }
             //div.innerHTML = `<div align="right"> ${res} </div>`
         })

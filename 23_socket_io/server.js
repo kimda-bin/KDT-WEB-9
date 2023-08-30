@@ -70,8 +70,8 @@ io.on('connection', (socket) => {
     //socket이 만들어지는 순간 고유한 아이디가 생성된다
     //밑의 콘솔 socket.rooms -> 현재 클라이언트 아이디
     // console.log('조인 전', socket.rooms)
-    const user = socket.rooms
-    console.log(user)
+    //const user = socket.rooms
+    //console.log(user)
     socket.on('join', (res) => {
         //채팅방을 생성하는 방법은 join(방 아이디)사용. 방이 이미 존재하면 그 방으로 접속
         socket.join(res)
@@ -92,8 +92,12 @@ io.on('connection', (socket) => {
 
     socket.on('message', (res) => {
         //io.to(특정 방 아이디).emit(이벤트) -> 특정 방의 전체 사용자들에게 메세지 전달
-        console.log(user)
-        io.to(socket.room).emit('chat', { data: res, name: user })
+        //console.log(user)
+        const info = {
+            message: res,
+            id: socket.id
+        }
+        io.to(socket.room).emit('chat', info)
     })
 
     // socket.on('leave', () => {
