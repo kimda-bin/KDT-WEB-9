@@ -87,3 +87,14 @@
 .text-container {
   margin: 20px;
 }
+
+.table-style {
+  border: 1px solid;
+  border-collapse: collapse;
+  width: 300px;
+}
+
+th,
+td {
+  border: 1px solid;
+}
