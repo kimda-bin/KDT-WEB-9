@@ -1,5 +1,6 @@
 import ClassComponent from "./ClassComponent";
 import Counter from "./Counter";
+import CounterFunc from "./CounterFunc";
 import Event from "./Event";
 import EventClass from "./EventClass";
 import EventT from "./EventT";
@@ -49,7 +50,8 @@ function App() {
       {/* <Counter></Counter> */}
       {/* <StateT1></StateT1> */}
       {/* <StateT2></StateT2> */}
-      <StateT3></StateT3>
+      {/* <StateT3></StateT3> */}
+      <CounterFunc></CounterFunc>
     </>
   );
 }
