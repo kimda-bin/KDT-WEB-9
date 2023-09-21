@@ -11,8 +11,16 @@ import StateT1 from "./StateT1";
 import StateT2 from "./StateT2";
 import StateT3 from "./StateT3";
 import T1Body from "./T1Body";
+import ToggleFunc from "./ToggleFunc";
 import Test from "./test";
 import Test2 from "./test2";
+import FuncStateT1 from "./funcStateT1";
+import FuncStateT2 from "./FuncStateT2";
+import FuncStateT3 from "./FuncStateT3";
+import FuncStateT4 from "./FuncStateT4";
+import FuncStateT5 from "./FuncStateT5";
+import Practice5 from "./Practice5";
+import LifeCycleClass from "./LifeCycleClass";
 
 function App() {
   return (
@@ -51,7 +59,15 @@ function App() {
       {/* <StateT1></StateT1> */}
       {/* <StateT2></StateT2> */}
       {/* <StateT3></StateT3> */}
-      <CounterFunc></CounterFunc>
+      {/* <CounterFunc></CounterFunc> */}
+      {/* <ToggleFunc></ToggleFunc> */}
+      {/* <FuncStateT1></FuncStateT1> */}
+      {/* <FuncStateT2></FuncStateT2> */}
+      {/* <FuncStateT3></FuncStateT3> */}
+      {/* <FuncStateT4></FuncStateT4> */}
+      <FuncStateT5></FuncStateT5>
+      {/* <Practice5></Practice5> */}
+      {/* <LifeCycleClass></LifeCycleClass> */}
     </>
   );
 }
