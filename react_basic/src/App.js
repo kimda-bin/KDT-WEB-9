@@ -21,8 +21,16 @@ import FuncStateT4 from "./FuncStateT4";
 import FuncStateT5 from "./FuncStateT5";
 import Practice5 from "./Practice5";
 import LifeCycleClass from "./LifeCycleClass";
+import LifeCycleFunc from "./LifeCycleFunc";
+import UseEffectT1 from "./UseEffectT1";
+import UseEffectT2 from "./UseEffectT2";
+import { useState } from "react";
 
 function App() {
+  // const [status, setStatus] = useState(true);
+  // const removeComp = () => {
+  //   setStatus(false);
+  // };
   return (
     <>
       {/* 컴포넌트 */}
@@ -65,9 +73,13 @@ function App() {
       {/* <FuncStateT2></FuncStateT2> */}
       {/* <FuncStateT3></FuncStateT3> */}
       {/* <FuncStateT4></FuncStateT4> */}
-      <FuncStateT5></FuncStateT5>
+      {/* <FuncStateT5></FuncStateT5> */}
       {/* <Practice5></Practice5> */}
       {/* <LifeCycleClass></LifeCycleClass> */}
+      {/* <LifeCycleFunc></LifeCycleFunc> */}
+      {/* <UseEffectT1></UseEffectT1> */}
+      {/* {status && <UseEffectT2 />}
+      <button onClick={removeComp}>연결해제</button> */}
     </>
   );
 }
