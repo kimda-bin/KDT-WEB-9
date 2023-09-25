@@ -25,6 +25,12 @@ import LifeCycleFunc from "./LifeCycleFunc";
 import UseEffectT1 from "./UseEffectT1";
 import UseEffectT2 from "./UseEffectT2";
 import { useState } from "react";
+import RefSampleClass1 from "./RefSampleClass1";
+import RefSampleClass2 from "./RefSampleClass2";
+import RefSampleClassT1 from "./RefSampleClassT1";
+import RefSampleFunc1 from "./RefSampleFunc1";
+import RefSampleFunc2 from "./RefSampleFunc2";
+import RefSampleFuncT1 from "./RefSampleFuncT1";
 
 function App() {
   // const [status, setStatus] = useState(true);
@@ -80,6 +86,13 @@ function App() {
       {/* <UseEffectT1></UseEffectT1> */}
       {/* {status && <UseEffectT2 />}
       <button onClick={removeComp}>연결해제</button> */}
+
+      {/* <RefSampleClass1 />
+      <RefSampleClass2></RefSampleClass2> */}
+      {/* <RefSampleClassT1 /> */}
+      {/* <RefSampleFunc1 /> */}
+      {/* <RefSampleFunc2 /> */}
+      <RefSampleFuncT1 />
     </>
   );
 }
