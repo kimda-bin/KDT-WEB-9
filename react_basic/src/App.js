@@ -31,6 +31,9 @@ import RefSampleClassT1 from "./RefSampleClassT1";
 import RefSampleFunc1 from "./RefSampleFunc1";
 import RefSampleFunc2 from "./RefSampleFunc2";
 import RefSampleFuncT1 from "./RefSampleFuncT1";
+import UseMomo from "./useMemo";
+import UseCallback from "./useCallback";
+import Counter2 from "./useReducer";
 
 function App() {
   // const [status, setStatus] = useState(true);
@@ -92,7 +95,10 @@ function App() {
       {/* <RefSampleClassT1 /> */}
       {/* <RefSampleFunc1 /> */}
       {/* <RefSampleFunc2 /> */}
-      <RefSampleFuncT1 />
+      {/* <RefSampleFuncT1 /> */}
+      {/* <UseMomo /> */}
+      {/*<UseCallback></UseCallback> */}
+      <Counter2></Counter2>
     </>
   );
 }
