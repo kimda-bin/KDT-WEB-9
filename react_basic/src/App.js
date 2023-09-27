@@ -1,39 +1,4 @@
-import ClassComponent from "./ClassComponent";
-import Counter from "./Counter";
-import CounterFunc from "./CounterFunc";
-import Event from "./Event";
-import EventClass from "./EventClass";
-import EventT from "./EventT";
-import FunctionComponent from "./FunctionComponent";
-import PropsT1 from "./PropsT1";
-import PropsT2 from "./PropsT2";
-import StateT1 from "./StateT1";
-import StateT2 from "./StateT2";
-import StateT3 from "./StateT3";
-import T1Body from "./T1Body";
-import ToggleFunc from "./ToggleFunc";
-import Test from "./test";
-import Test2 from "./test2";
-import FuncStateT1 from "./funcStateT1";
-import FuncStateT2 from "./FuncStateT2";
-import FuncStateT3 from "./FuncStateT3";
-import FuncStateT4 from "./FuncStateT4";
-import FuncStateT5 from "./FuncStateT5";
-import Practice5 from "./Practice5";
-import LifeCycleClass from "./LifeCycleClass";
-import LifeCycleFunc from "./LifeCycleFunc";
-import UseEffectT1 from "./UseEffectT1";
-import UseEffectT2 from "./UseEffectT2";
-import { useState } from "react";
-import RefSampleClass1 from "./RefSampleClass1";
-import RefSampleClass2 from "./RefSampleClass2";
-import RefSampleClassT1 from "./RefSampleClassT1";
-import RefSampleFunc1 from "./RefSampleFunc1";
-import RefSampleFunc2 from "./RefSampleFunc2";
-import RefSampleFuncT1 from "./RefSampleFuncT1";
-import UseMomo from "./useMemo";
-import UseCallback from "./useCallback";
-import Counter2 from "./useReducer";
+import Router from "./12Router/Router";
 
 function App() {
   // const [status, setStatus] = useState(true);
@@ -97,8 +62,16 @@ function App() {
       {/* <RefSampleFunc2 /> */}
       {/* <RefSampleFuncT1 /> */}
       {/* <UseMomo /> */}
-      {/*<UseCallback></UseCallback> */}
-      <Counter2></Counter2>
+      {/*<UseCallback></UseCallback>*/}
+      {/*<Counter2></Counter2>*/}
+      {/* <UseReducerT1 /> */}
+      {/* <Style></Style> */}
+      {/* <SassComponent></SassComponent> */}
+      {/* <StyledComponent></StyledComponent> */}
+      {/* <StyleComponentT1></StyleComponentT1> */}
+      {/* <StyleComponentT2 /> */}
+
+      <Router></Router>
     </>
   );
 }
