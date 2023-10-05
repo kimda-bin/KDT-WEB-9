@@ -5,6 +5,9 @@ import { LangProvider } from "./14ContextT1/store/lang-context";
 import LangSelector from "./14ContextT1/LangSelector";
 import { ColorProvider } from "./14ContextT1/store/color-context";
 import ColorSelector from "./14ContextT1/ColorSelector";
+import ProductList from "./14ContextT2/ProductList";
+import Cart from "./14ContextT2/Cart";
+import { CartProvider } from "./14ContextT2/store/cart-context";
 
 function App() {
   //const [language, setLanguage] = useState("ko");
@@ -13,13 +16,18 @@ function App() {
       {/* <LanguageProvider>
         <LanguageSelector></LanguageSelector>
       </LanguageProvider> */}
-      <LangProvider>
+      {/* <LangProvider>
         <LangSelector></LangSelector>
       </LangProvider>
 
       <ColorProvider>
         <ColorSelector></ColorSelector>
-      </ColorProvider>
+      </ColorProvider> */}
+
+      <CartProvider>
+        <ProductList />
+        <Cart />
+      </CartProvider>
 
       {/* <MyContext.Provider
         value={{ language: language, setLanguage: setLanguage }}
