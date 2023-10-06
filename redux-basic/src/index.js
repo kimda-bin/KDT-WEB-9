@@ -162,7 +162,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import { Provider } from "react-redux";
-import store from "./store/cart";
+import store from "./store";
 import ProductList from "./ReactReduxT1/ProductList";
 import Cart from "./ReactReduxT1/Cart";
 
@@ -171,9 +171,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      {/* <App /> */}
-      <ProductList />
-      <Cart />
+      <App />
     </Provider>
   </React.StrictMode>
 );
