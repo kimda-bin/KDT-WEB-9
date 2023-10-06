@@ -1,4 +1,5 @@
 //리덕스를 이용한 숫자증가, 감소 코드
+/*
 import { createStore } from "redux";
 
 ////////////////////////실습////////////////////////
@@ -153,3 +154,26 @@ form.addEventListener("submit", (event) => {
 //   count = count - 1;
 //   num.textContent = count;
 // });
+
+*/
+
+//리액트 redux
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import { Provider } from "react-redux";
+import store from "./store/cart";
+import ProductList from "./ReactReduxT1/ProductList";
+import Cart from "./ReactReduxT1/Cart";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      {/* <App /> */}
+      <ProductList />
+      <Cart />
+    </Provider>
+  </React.StrictMode>
+);
